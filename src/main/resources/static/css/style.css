@@ -1,5 +1,5 @@
 body {
-    background-color: black;
+    background-color: black !important;
 }
 
 .topnav {
@@ -142,4 +142,25 @@ a {
 /* On small screens, set height to 'auto' for the grid */
 @media screen and (max-width: 767px) {
     .row.content {height: auto;}
+}
+
+table {
+    margin: auto;
+    width: 700px;
+}
+
+#pagination {
+    text-align: center;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
 }
