@@ -20,12 +20,12 @@ public class PageController {
     }
 
     @GetMapping("/dashboard")
-    public String getDashboard() {
+    public String getDashboardPage() {
         return "dashboard";
     }
 
     @GetMapping("/transaction")
-    public String getTransactions() {
+    public String getTransactionsPage() {
         return "transaction";
     }
 

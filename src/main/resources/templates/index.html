@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Main page</title>
@@ -7,7 +7,7 @@
 </head>
 <body>
     <div class = "topnav">
-        <a class = "active" href = "../html/login.html">Login</a>
+        <a class = "active" th:href = "login">Login</a>
     </div>
 
     <div class = "middle_box">
