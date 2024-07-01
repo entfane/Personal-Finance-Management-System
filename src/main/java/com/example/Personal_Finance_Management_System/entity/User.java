@@ -2,6 +2,8 @@ package com.example.Personal_Finance_Management_System.entity;
 
 import jakarta.persistence.*;
 
+import java.util.Set;
+
 @Entity(name = "users")
 public class User {
 
@@ -16,12 +18,16 @@ public class User {
     @Column(name = "password")
     private String password;
 
+    @OneToMany(mappedBy = "transactions")
+    private Set<Transaction> transactions;
+
     public User() {}
 
-    public User(int id, String email, String password) {
+    public User(int id, String email, String password, Set<Transaction> transactions) {
         this.id = id;
         this.email = email;
         this.password = password;
+        this.transactions = transactions;
     }
 
     public int getId() {
@@ -46,5 +52,13 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public Set<Transaction> getTransactions() {
+        return transactions;
+    }
+
+    public void setTransactions(Set<Transaction> transactions) {
+        this.transactions = transactions;
     }
 }
